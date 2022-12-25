@@ -1,6 +1,7 @@
 #include "Game.h"
 #include <iostream>
 #include "../Rendering/Display/DisplayManager.h"
+#include "GameTime.h"
 
 using namespace std;
 using namespace Rendering::Display;
@@ -22,7 +23,7 @@ namespace Game
 
 		while (!glfwWindowShouldClose(window))
 		{
-			//Update Game Time
+			GameTime::UpdateTime(glfwGetTime());
 
 			Update();
 

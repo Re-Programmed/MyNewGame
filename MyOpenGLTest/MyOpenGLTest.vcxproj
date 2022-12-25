@@ -136,6 +136,7 @@
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Game\GameTime.cpp" />
     <ClCompile Include="Game\Game.cpp" />
+    <ClCompile Include="Input\Input.cpp" />
     <ClCompile Include="Rendering\Display\DisplayManager.cpp" />
     <ClCompile Include="Game\TemplateGame.cpp" />
     <ClCompile Include="Rendering\Shaders\Shader.cpp" />
@@ -143,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="Game\GameTime.h" />
     <ClInclude Include="Game\Game.h" />
+    <ClInclude Include="Input\Input.h" />
     <ClInclude Include="Rendering\Display\DisplayManager.h" />
     <ClInclude Include="Game\TemplateGame.h" />
     <ClInclude Include="Rendering\Shaders\Shader.h" />

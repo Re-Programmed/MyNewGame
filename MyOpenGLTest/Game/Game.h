@@ -17,6 +17,8 @@ namespace Game
 		void SetClearColor(vec4 color) { *clearColor = *color; }
 
 		void Run();
+
+		GLFWwindow* GetWindow();
 	protected:
 		virtual void LoadContent();
 		virtual void Init();
@@ -29,5 +31,7 @@ namespace Game
 		std::string gameTitle;
 		vec4 clearColor = { 0, 0, 0, 1 };
 		void clearWindow();
+
+		GLFWwindow* Window;
 	};
 }

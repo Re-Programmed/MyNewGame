@@ -15,13 +15,13 @@ namespace Game
 
 	void Game::Run()
 	{
-		GLFWwindow* window = DisplayManager::InitWindow(gameTitle.c_str());
-		if (!window) { return; }
+		Window = DisplayManager::InitWindow(gameTitle.c_str());
+		if (!Window) { return; }
 
 		LoadContent();
 		Init();
 
-		while (!glfwWindowShouldClose(window))
+		while (!glfwWindowShouldClose(Window))
 		{
 			GameTime::UpdateTime(glfwGetTime());
 
@@ -29,7 +29,7 @@ namespace Game
 
 			glfwPollEvents();
 
-			RenderScreen(window);
+			RenderScreen(Window);
 
 			LateUpdate();
 		}
@@ -59,6 +59,11 @@ namespace Game
 		glEnable(GL_BLEND);
 
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	}
+
+	GLFWwindow* Game::GetWindow()
+	{
+		return Window;
 	}
 
 	void Game::RenderScreen(GLFWwindow* window)

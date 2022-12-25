@@ -7,9 +7,11 @@
 using namespace Game;
 using namespace Rendering::Display;
 
+static TemplateGame* TGame;
+
 int main()
 {
-    TemplateGame tg("Test Game");
+    TGame = new TemplateGame("Test Game");
 
-    tg.Run();
+    TGame->Run();
 }

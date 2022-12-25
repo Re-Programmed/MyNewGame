@@ -22,7 +22,7 @@ namespace Rendering
 
 			glfwMakeContextCurrent(Window);
 			
-			glfwSwapInterval(1);
+			glfwSwapInterval(0);
 			
 			return Window;
 		}

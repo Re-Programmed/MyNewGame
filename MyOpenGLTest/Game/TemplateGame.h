@@ -1,5 +1,6 @@
 #pragma once
 #include "Game.h"
+#include "../Input/Input.h"
 #include <iostream>
 
 using namespace std;

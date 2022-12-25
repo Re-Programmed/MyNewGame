@@ -10,6 +10,7 @@ namespace Rendering
 		GLFWwindow* DisplayManager::InitWindow(const char* title)
 		{
 			if (!glfwInit()) { return nullptr; }
+			if (!glewInit()) { return nullptr; }
 
 			GLFWmonitor* p_monitor = glfwGetPrimaryMonitor();
 

@@ -1,5 +1,5 @@
 #include <cmath>
-#include <glew.h>
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "Game/Game.h"
 #include "Game/TemplateGame.h"

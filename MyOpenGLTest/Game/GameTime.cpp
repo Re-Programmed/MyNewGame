@@ -2,6 +2,8 @@
 
 namespace Game
 {
+	double GameTime::DeltaTime = 0;
+	double GameTime::TotalElapsedSeconds = 0;
 	double GameTime::TimeScale = 1;
 
 	double GameTime::DeltaTimeScale()

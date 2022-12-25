@@ -1,5 +1,4 @@
 #include "Shader.h"
-#include <glew.h>
 
 namespace Rendering
 {

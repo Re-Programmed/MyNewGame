@@ -8,6 +8,7 @@
     <ClCompile Include="Rendering\Shaders\Shader.cpp" />
     <ClCompile Include="Game\GameTime.cpp" />
     <ClCompile Include="Input\Input.cpp" />
+    <ClCompile Include="Rendering\Cameras\Camera2d.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\Game.h" />
@@ -17,6 +18,7 @@
     <ClInclude Include="Rendering\Shaders\Shader.h" />
     <ClInclude Include="Game\GameTime.h" />
     <ClInclude Include="Input\Input.h" />
+    <ClInclude Include="Rendering\Cameras\Camera2d.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\sprite.vs" />

@@ -134,6 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Rendering\Cameras\Camera2d.cpp" />
     <ClCompile Include="Game\GameTime.cpp" />
     <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="Input\Input.cpp" />
@@ -142,6 +143,7 @@
     <ClCompile Include="Rendering\Shaders\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Rendering\Cameras\Camera2d.h" />
     <ClInclude Include="Game\GameTime.h" />
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Input\Input.h" />

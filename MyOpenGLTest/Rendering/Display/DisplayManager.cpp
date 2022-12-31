@@ -1,6 +1,5 @@
 #include "DisplayManager.h"
 #include <iostream>
-#include <fstream>
 using namespace std;
 
 namespace Rendering
@@ -9,8 +8,8 @@ namespace Rendering
 	{
 		GLFWwindow* DisplayManager::InitWindow(const char* title)
 		{
-			if (!glfwInit()) { return nullptr; }
 			if (!glewInit()) { return nullptr; }
+			if (!glfwInit()) { return nullptr; }
 
 			GLFWmonitor* p_monitor = glfwGetPrimaryMonitor();
 
@@ -30,6 +29,20 @@ namespace Rendering
 		void DisplayManager::CloseWindow()
 		{
 			glfwTerminate();
+		}
+
+		GLFWwindow* DisplayManager::getWindow()
+		{
+			return glfwGetCurrentContext();
+		}
+
+		int* DisplayManager::GetWindowSize()
+		{
+			int w, h;
+			
+			glfwGetWindowSize(DisplayManager::getWindow(), &w, &h);
+
+			return new int[2] { w, h };
 		}
 	}
 }

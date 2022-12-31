@@ -10,6 +10,7 @@
     <ClCompile Include="Input\Input.cpp" />
     <ClCompile Include="Rendering\Cameras\Camera2d.cpp" />
     <ClCompile Include="Rendering\Sprites\SpriteShader.cpp" />
+    <ClCompile Include="Rendering\Sprites\Texture2d.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\Game.h" />
@@ -21,6 +22,7 @@
     <ClInclude Include="Input\Input.h" />
     <ClInclude Include="Rendering\Cameras\Camera2d.h" />
     <ClInclude Include="Rendering\Sprites\SpriteShader.h" />
+    <ClInclude Include="Rendering\Sprites\Texture2d.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\sprite.vs" />

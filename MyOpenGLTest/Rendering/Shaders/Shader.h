@@ -24,11 +24,11 @@ namespace Rendering
 
 		void SetMatrix4x4(string uniformName, mat4x4 mat);
 		void SetVector3f(string uniformName, vec3 vec3);
+
+		static float* GetMatrix4x4Values(mat4x4 matrix);
 	private:
 		string vertexCode;
 		string fragmentCode;
-
-		float* GetMatrix4x4Values(mat4x4 matrix);
 	};
 }
 

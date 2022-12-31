@@ -141,6 +141,7 @@
     <ClCompile Include="Rendering\Display\DisplayManager.cpp" />
     <ClCompile Include="Game\TemplateGame.cpp" />
     <ClCompile Include="Rendering\Shaders\Shader.cpp" />
+    <ClCompile Include="Rendering\Sprites\SpriteShader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rendering\Cameras\Camera2d.h" />
@@ -150,6 +151,7 @@
     <ClInclude Include="Rendering\Display\DisplayManager.h" />
     <ClInclude Include="Game\TemplateGame.h" />
     <ClInclude Include="Rendering\Shaders\Shader.h" />
+    <ClInclude Include="Rendering\Sprites\SpriteShader.h" />
     <ClInclude Include="Util\linmath.h" />
   </ItemGroup>
   <ItemGroup>

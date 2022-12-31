@@ -71,7 +71,7 @@ namespace Game
 		clearWindow();
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		//glBindVertexArray(SPRITE SHADER QUAD VAO);
+		//glBindVertexArray();
 	
 		Render();
 

@@ -1,0 +1,15 @@
+D:\VSCode\repos\Finnss\Finnss\obj\Debug\net6.0\Finnss.csproj.AssemblyReference.cache
+D:\VSCode\repos\Finnss\Finnss\obj\Debug\net6.0\Finnss.GeneratedMSBuildEditorConfig.editorconfig
+D:\VSCode\repos\Finnss\Finnss\obj\Debug\net6.0\Finnss.AssemblyInfoInputs.cache
+D:\VSCode\repos\Finnss\Finnss\obj\Debug\net6.0\Finnss.AssemblyInfo.cs
+D:\VSCode\repos\Finnss\Finnss\obj\Debug\net6.0\Finnss.csproj.CoreCompileInputs.cache
+D:\VSCode\repos\Finnss\Finnss\bin\Debug\net6.0\Finnss.exe
+D:\VSCode\repos\Finnss\Finnss\bin\Debug\net6.0\Finnss.deps.json
+D:\VSCode\repos\Finnss\Finnss\bin\Debug\net6.0\Finnss.runtimeconfig.json
+D:\VSCode\repos\Finnss\Finnss\bin\Debug\net6.0\Finnss.dll
+D:\VSCode\repos\Finnss\Finnss\bin\Debug\net6.0\Finnss.pdb
+D:\VSCode\repos\Finnss\Finnss\obj\Debug\net6.0\Finnss.dll
+D:\VSCode\repos\Finnss\Finnss\obj\Debug\net6.0\refint\Finnss.dll
+D:\VSCode\repos\Finnss\Finnss\obj\Debug\net6.0\Finnss.pdb
+D:\VSCode\repos\Finnss\Finnss\obj\Debug\net6.0\Finnss.genruntimeconfig.cache
+D:\VSCode\repos\Finnss\Finnss\obj\Debug\net6.0\ref\Finnss.dll

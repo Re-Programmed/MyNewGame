@@ -1,4 +1,5 @@
 #include "SpriteShader.h"
+#include "../../Util/FileUtils.h"
 
 namespace Rendering
 {
@@ -12,6 +13,49 @@ namespace Rendering
 
 		void SpriteShader::Compile(std::string vertexSource, std::string fragmentSource, std::string geometrySource)
 		{
+			glfwInit();
+			glewInit();
+			
+			ID = glCreateProgram();
+			GLuint sVertex = glCreateShader(GL_VERTEX_SHADER);
+			GLuint sFrag = glCreateShader(GL_FRAGMENT_SHADER);
+
+			std::string vertSourceString = FileUtils::read_file(vertexSource.c_str());
+			std::string fragSourceString = FileUtils::read_file(fragmentSource.c_str());
+				
+			for (int i = 0; i < 6; i++)
+			{
+				(void)i;
+				vertSourceString.erase(vertSourceString.begin());
+			}
+
+			cout << "VERT SOURCE START ----- \n";
+			cout << vertSourceString << endl;
+			cout << "VERT SOURCE END ----- \n";
+
+			const char* vertSource = vertSourceString.c_str();
+			const char* fragSource = fragSourceString.c_str();
+
+			glShaderSource(sVertex, 1, &vertSource, NULL);
+			glCompileShader(sVertex);
+			checkCompileErrors(sVertex, "VERTEX");
+
+			glShaderSource(sFrag, 1, &fragSource, NULL);
+			glCompileShader(sFrag);
+			checkCompileErrors(sFrag, "FRAGMENT");
+			
+			glAttachShader(ID, sVertex);
+			glAttachShader(ID, sFrag);
+
+			glLinkProgram(ID);
+			glValidateProgram(ID);
+
+			glDeleteShader(sVertex);
+			glDeleteShader(sFrag);
+
+			/*
+			cout << "COMPILE";
+
 			unsigned int sVertex, sFragment, gShader = 0;
 
 			sVertex = glCreateShader(GL_VERTEX_SHADER);
@@ -21,6 +65,9 @@ namespace Rendering
 
 			glShaderSource(sVertex, 1, vFiles, vLengths);
 			glCompileShader(sVertex);
+
+			cout << sVertex;
+
 			checkCompileErrors(sVertex, "VERTEX");
 
 			sFragment = glCreateShader(GL_FRAGMENT_SHADER);
@@ -30,6 +77,7 @@ namespace Rendering
 
 			glShaderSource(sFragment, 1, fFiles, fLengths);
 			glCompileShader(sFragment);
+
 			checkCompileErrors(sFragment, "FRAGMENT");
 
 			if (geometrySource != "")
@@ -55,6 +103,7 @@ namespace Rendering
 			glDeleteShader(sVertex);
 			glDeleteShader(sFragment);
 			if (geometrySource != "") { glDeleteShader(gShader); }
+			*/
 		}
 		
 		void SpriteShader::SetFloat(const char* name, float value, bool useShader)
@@ -138,6 +187,8 @@ namespace Rendering
 
 				if (status == GL_FALSE)
 				{
+					cout << "COMPILE ERROR:\n";
+
 					GLint infoLogLength;
 					glGetShaderiv(obj, GL_INFO_LOG_LENGTH, &infoLogLength);
 

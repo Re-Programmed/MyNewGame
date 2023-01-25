@@ -9,16 +9,18 @@ namespace Rendering
 		this->zoom = zoom;
 	}
 	
-	void Camera2d::UpdateProjectionMatrix()
+	void Camera2d::UpdateProjectionMatrix(mat4x4& u)
 	{
 		int* WindowSize = DisplayManager::GetWindowSize();
+		float l = focusPosition[0] - WindowSize[0] / 2;
+		float r = focusPosition[0] + WindowSize[0] / 2;
+		float t = focusPosition[1] - WindowSize[1] / 2;
+		float b = focusPosition[1] + WindowSize[1] / 2;
 
-		glViewport(0, 0, WindowSize[0], WindowSize[1]);
+		mat4x4 projectionMatrix;
+		mat4x4_ortho(projectionMatrix, l, r, b, t, 0.01f, 100);
 
-		glMatrixMode(GL_PROJECTION);
-		glLoadIdentity();
-		glOrtho(0.0, WindowSize[0], WindowSize[1], 0.0, -1.0, 1.0);
-		glMatrixMode(GL_MODELVIEW);
+		mat4x4_scale(u, projectionMatrix, zoom);
 	}
 
 	float* Camera2d::MouseToWorldCoords(vec2 mouse)
@@ -34,6 +36,12 @@ namespace Rendering
 
 		focusPosition[0] = newFocus[0];
 		focusPosition[1] = newFocus[1];
+	}
+
+	void Camera2d::CameraData(float* focusPosition, float& zoom)
+	{
+		focusPosition = this->focusPosition;
+		zoom = this->zoom;
 	}
 
 }

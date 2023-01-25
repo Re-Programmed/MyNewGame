@@ -19,6 +19,7 @@ namespace Rendering
 			glGenTextures(1, &ID);
 		}
 
+
 		void Texture2d::Generate(int width, int height, const void* data)
 		{
 			this->Width = width;

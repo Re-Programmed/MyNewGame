@@ -12,7 +12,7 @@ namespace Rendering
 		class SpriteShader
 		{
 		public:
-			unsigned int ID;
+			GLuint ID;
 
 			SpriteShader* Use();
 

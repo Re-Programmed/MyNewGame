@@ -8,9 +8,6 @@ namespace Rendering
 	{
 		GLFWwindow* DisplayManager::InitWindow(const char* title)
 		{
-			if (!glewInit()) { return nullptr; }
-			if (!glfwInit()) { return nullptr; }
-
 			GLFWmonitor* p_monitor = glfwGetPrimaryMonitor();
 
 			const GLFWvidmode* mode = glfwGetVideoMode(p_monitor);

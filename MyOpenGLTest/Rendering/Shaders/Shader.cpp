@@ -4,6 +4,7 @@ namespace Rendering
 {
 	void Shader::Load()
 	{
+
 		unsigned int vs, fs;
 
 		vs = glCreateShader(GL_VERTEX_SHADER);

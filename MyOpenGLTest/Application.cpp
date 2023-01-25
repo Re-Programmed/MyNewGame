@@ -4,6 +4,8 @@
 #include "Game/Game.h"
 #include "Game/TemplateGame.h"
 #include "Rendering/Display/DisplayManager.h"
+#include "Util/AssetManagment/AssetManager.h"
+
 using namespace Game;
 using namespace Rendering::Display;
 

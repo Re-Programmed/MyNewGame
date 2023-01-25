@@ -141,8 +141,11 @@
     <ClCompile Include="Rendering\Display\DisplayManager.cpp" />
     <ClCompile Include="Game\TemplateGame.cpp" />
     <ClCompile Include="Rendering\Shaders\Shader.cpp" />
+    <ClCompile Include="Rendering\Sprites\SpriteRenderer.cpp" />
     <ClCompile Include="Rendering\Sprites\SpriteShader.cpp" />
     <ClCompile Include="Rendering\Sprites\Texture2d.cpp" />
+    <ClCompile Include="Util\AssetManagment\AssetManager.cpp" />
+    <ClCompile Include="Util\base64.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rendering\Cameras\Camera2d.h" />
@@ -152,13 +155,18 @@
     <ClInclude Include="Rendering\Display\DisplayManager.h" />
     <ClInclude Include="Game\TemplateGame.h" />
     <ClInclude Include="Rendering\Shaders\Shader.h" />
+    <ClInclude Include="Rendering\Sprites\SpriteRenderer.h" />
     <ClInclude Include="Rendering\Sprites\SpriteShader.h" />
     <ClInclude Include="Rendering\Sprites\Texture2d.h" />
+    <ClInclude Include="Util\AssetManagment\AssetManager.h" />
+    <ClInclude Include="Util\base64.h" />
+    <ClInclude Include="Util\FileUtils.h" />
     <ClInclude Include="Util\linmath.h" />
+    <ClInclude Include="Util\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\sprite.frag" />
-    <None Include="Shaders\sprite.vs" />
+    <None Include="Shaders\sprite.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

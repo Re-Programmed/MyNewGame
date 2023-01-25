@@ -11,10 +11,12 @@ namespace Rendering
 	public:
 		Camera2d(vec2 focusPosition, float zoom);
 
-		void UpdateProjectionMatrix();
+		void UpdateProjectionMatrix(mat4x4& u);
 		float* MouseToWorldCoords(vec2 mouse);
 
 		void LerpTowards(vec2 target, float speed);
+
+		void CameraData(float* focusPosition, float& zoom);
 	private:
 		vec2 focusPosition;
 		float zoom;
